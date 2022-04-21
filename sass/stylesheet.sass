@@ -1,0 +1,571 @@
+@import media
+@import variable
+@import fonts
+
+*
+	box-sizing: border-box
+	&::before, &::after
+		box-sizing: border-box
+
+::-webkit-scrollbar
+	width: 5px
+
+ul[class],
+ol[class]
+	padding: 0
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd
+	margin: 0
+
+h2,
+h3,
+h4,
+h5,
+h6
+	font-family: Montserrat, Arial, Helvetica, sans-serif
+	color: $color-title
+
+h2
+	position: relative
+	font-size: 60px
+	font-weight: bold
+	padding-bottom: 10px
+	&::before
+		content: ''
+		display: block
+		position: absolute
+		bottom: 0
+		left: 0
+		width: 60px
+		border-bottom: 4px solid $color-orange
+
+p
+	font-family: Open Sans, Arial, Helvetica, sans-serif
+	font-size: 14px
+	font-weight: lighter
+
+section
+	padding: 150px 0
+
+body
+	color: $color-text
+	min-height: 100vh
+	scroll-behavior: smooth
+	text-rendering: optimizeSpeed
+	line-height: 1.5
+	font-family: Raleway, Arial, Helvetica, sans-serif
+
+ul[class],
+ol[class]
+	list-style: none
+
+a[class]
+	text-decoration: none
+
+img
+	max-width: 100%
+	display: block
+
+article > * + *
+	margin-top: 1em
+
+input,
+button,
+textarea,
+select
+	font: inherit
+
+.container
+	margin: 0 auto
+	width: 1140px
+
+.container-fluid
+ width: 100%
+ padding-right: 52px
+ padding-left: 52px
+ margin-right: auto
+ margin-left: auto
+
+.header
+	height: 100vh
+	background: url('/img/Header.jpg') no-repeat top center / cover
+
+	.header__top
+		background: #fff
+		height: 94px
+		z-index: 999
+
+		.header__top-inner
+			display: flex
+			justify-content: space-between
+			align-items: center
+			padding: 26px 0
+
+	.header__content
+		width: 100%
+		font-family: Montserrat, Arial, Helvetica, sans-serif
+
+		.header__content-inner
+			display: flex
+			justify-content: center
+			flex-direction: column
+			align-items: center
+
+			.header__content-title
+				font-size: 100px
+				font-weight: bold
+				letter-spacing: 2px
+				color: #fff
+				margin-top: 223px
+				margin-bottom: 12px
+
+			.header__content-description
+				color: $color-orange
+				font-size: 16px
+				font-weight: bold
+				letter-spacing: 2.74px
+				word-spacing: 1px
+				margin-bottom: 145px
+
+			.header__content-decor
+				color: #fff
+				cursor: pointer
+
+.menu
+	font-size: 12px
+	font-weight: bold
+	letter-spacing: 0.6px
+
+	.menu__list
+		display: flex
+		justify-content: space-between
+		width: 613px
+
+	.menu__list-item
+		.menu__link
+			text-transform: uppercase
+
+.logo
+	.logo__link
+		img
+			margin: 0 auto
+
+.logo--line
+	width: 150px
+	height: 68px
+	margin: 0 auto
+	border-bottom: 3px solid orange
+
+.about
+	background: $color-bg
+	.about__inner
+		display: flex
+		justify-content: space-between
+		flex-wrap: wrap
+		.about__title
+			font-size: 46px
+			height: fit-content
+		.about__text
+			width: 65%
+
+.expertise
+	.expertise__title
+	.expertise__content
+		display: flex
+		justify-content: space-between
+		padding: 110px 0
+		flex-wrap: wrap
+		.expertise__content-items
+			display: flex
+			justify-content: space-between
+			flex-direction: column
+			.expertise__content-progressbar
+				width: 350px
+				height: 2px
+				background: #F0F0F0
+				.expertise__content-progressbar--value
+					height: 2px
+					width: 270px
+					background: #1D1D1D
+					&:nth-child(2)
+						background: #e5e5e5
+
+		.expertise__content-text
+			max-width: 770px
+	.expertise__items
+		display: flex
+		justify-content: space-between
+		flex-wrap: wrap
+		.expertise__item
+			display: flex
+			align-items: flex-start
+			width: 350px
+			.expertise__item-img
+				margin-right: 35px
+			.expertise__item-box
+				.expertise__item-title
+					margin-bottom: 15px
+				.expertise__item-text
+
+.features
+	background: $color-bg url('/img/people.png') no-repeat left
+	.container
+		display: flex
+		justify-content: flex-end
+	.features__inner
+		display: flex
+		flex-direction: column
+		width: 470px
+		.features__title
+			margin-bottom: 67px
+			font-size: 60px
+			line-height: 75px
+			.features__text
+				font-size: 14px
+				font-weight: 300
+
+.portfolio
+	padding-bottom: 0
+	.portfolio__head
+		display: flex
+		justify-content: space-between
+		align-items: center
+		flex-wrap: wrap
+		.portfolio__title
+
+		.portfolio__buttons
+			.porfolio__btn
+				height: 30px
+				padding: 5px 15px
+				margin: 0 10px
+				border: none
+				background: none
+				font-size: 12px
+				font-weight: 600
+				text-transform: uppercase
+				color: #333
+				&:hover
+					border-bottom: 1px solid $color-orange
+
+	.portfolio__images
+		display: grid
+		grid-template-columns: repeat(4, 1fr)
+		grid-gap: 22px
+		grid-auto-rows: minmax(200px, auto)
+		padding: 80px 0 110px 0
+
+		.portfolio__item-img
+			position: relative
+			background: #EDEDED
+			color: #fff
+
+			.portfolio__item-overlay
+				display: flex
+				justify-content: center
+				align-items: center
+				flex-direction: column
+				position: absolute
+				width: 100%
+				height: 100%
+				opacity: 0
+				&:hover
+					border: 15px solid #6A6868
+					background: #504D4D
+					opacity: 1
+				.portfolio__item-title
+					color: #fff
+					font-size: 14px
+					font-weight: 600
+
+				.portfolio__item-discr
+					font-size: 12px
+					font-weight: 300
+
+	.portfolio__btn-all
+		display: block
+		width: 100%
+		background: $color-bg
+		border: none
+		padding: 42px 0
+		margin: 0
+		font-family: Montserrat, Arial, Helvetica, sans-serif
+		font-size: 14px
+		letter-spacing: 1.2px
+		cursor: pointer
+
+.video
+	padding-bottom: 0
+	.video__quotes
+		display: flex
+		justify-content: center
+		flex-direction: column
+		max-width: 650px
+		text-align: center
+		margin: 0 auto 150px
+		p
+			margin-bottom: 40px
+			font-family: Merriweather
+			font-size: 18px
+			font-style: italic
+
+			&::before
+				content: '\201C'
+			&::after
+				content: '\201D'
+
+	.video__quotes-author
+		color: #9E9E9E
+		font-family: Merriweather
+		font-size: 14px
+		font-style: italic
+
+	.video__content
+		width: 100%
+		background: #fff url('../img/Video.jpg') no-repeat center / cover
+		height: 364px
+		z-index: 111
+
+.statistics__inner
+	display: flex
+	justify-content: space-around
+	flex-wrap: wrap
+	.statistics__item
+		flex-direction: column
+		.statistics__item-num
+			font-size: 60px
+			font-weight: bold
+		.statistics__item-text
+			font-size: 14px
+			color: $color-green
+
+.slider
+	display: flex
+	justify-content: space-around
+	align-content: center
+	background: $color-bg
+	.slider__inner
+		display: flex
+		justify-content: space-around
+		.slider__item
+			display: flex
+			justify-content: center
+			flex-direction: column
+			max-width: 670px
+			.slider__item-title
+				max-width: 705px
+				font-size: 40px
+				font-weight: bold
+				line-height: 52px
+				margin-bottom: 30px
+			.slider__item-text
+				font-size: 14px
+				font-weight: 300
+				color: #777777
+				margin-bottom: 200px
+
+			.slider__pagination
+				display: flex
+				.slider__pagination-item
+					font-size: 40px
+		.slider__item-img
+			width: 424px
+			height: 430px
+			background: #d7d7d7
+
+.team
+	.team__title
+		margin-bottom: 100px
+	.team__items
+		display: flex
+		flex-direction: row
+		flex-wrap: wrap
+		align-items: center
+		justify-content: space-between
+
+		.team__item
+			display: flex
+			flex-direction: column
+			align-items: center
+			.team__item-img
+				margin-bottom: 35px
+			.team__item-name
+				font-family: Montserrat, Arial, Helvetica, sans-serif
+				font-size: 14px
+				font-weight: bold
+				margin-bottom: 12px
+			.team__item-position
+				font-family: Open Sans, Arial, Helvetica, sans-serif
+				font-style: 12px
+				font-weight: 300
+				color: #c2c2c2
+
+.pricing
+	background: $color-bg
+	.pricing__title
+		margin-bottom: 91px
+	.pricing__items
+		display: flex
+		justify-content: space-between
+		flex-wrap: wrap
+		.pricing__item
+			width: 350px
+			height: 535px
+			padding: 24px
+			background: #fff
+			box-sizing: border-box
+			display: flex
+			flex-direction: column
+			text-align: center
+			.pricing__item-name
+				text-align: start
+			.pricing__item-rate
+				font-size: 80px
+				span
+					font-size: 20px
+					font-weight: 300
+			.pricing__list
+				margin-bottom: 30px
+				.pricing__list-item
+					padding: 15px
+					font-size: 16px
+					font-weight: 300
+			.pricing__btn
+				padding: 5px
+				font-family: Monsterrat, Arial, Helvetica, sans-serif
+				font-size: 14px
+				font-weight: 600
+				text-transform: uppercase
+				background: none
+				border: none
+				cursor: pointer
+
+.partner
+	padding: 40px 0
+	.partner__list
+		display: flex
+		flex-wrap: wrap
+		justify-content: space-evenly
+		align-items: center
+		.partner__list-item
+			width: 160px
+			height: 100%
+
+.contact
+	display: flex
+	.contact__title
+		margin-bottom: 94px
+	.contact__content
+		display: flex
+		justify-content: space-between
+		.contact__form
+			display: flex
+			flex-direction: column
+			justify-content: space-between
+			width: 570px
+			.contact__form-input
+				border: none
+				border-bottom: 2px solid #373A39
+				margin-bottom: 25px
+				padding: 15px 5px
+				outline: none
+				&:nth-last-child()
+					margin-top: 45px
+				&::-webkit-input-placeholder &::-moz-placeholder &:-ms-input-placeholder
+					color: #B8B8B8
+					font-size: 12px
+					font-weight: 400
+
+			.contact__form-textarea
+				height: 156px
+				margin-bottom: 40px
+				border: none
+				border-bottom: 2px solid #373A39
+				resize: none
+				outline: none
+			.contact__form-btn
+				width: 230px
+				padding: 14px 5px
+				background: #242121
+				color: #fff
+				letter-spacing: 2px
+				font-size: 11px
+				font-weight: bold
+				border: none
+				cursor: pointer
+
+	.contact__map
+		height: 100%
+		width: 635px
+		background: url('/img/map1.jpg') no-repeat right / cover
+
+.footer
+	position: relative
+	.footer__content
+		box-sizing: content-box
+		min-height: 552px
+		background: $color-text
+		padding: 110px 0 60px 0
+		.footer__social
+			display: flex
+			justify-content: space-between
+			margin: 0 auto
+			max-width: 692px
+			margin: 73px auto 65px auto
+			.footer__social-link
+				text-transform: uppercase
+				color: #fff
+				&:visited
+					color: #fff
+		.footer__info
+			display: flex
+			flex-direction: column
+			justify-content: space-between
+			text-align: center
+			margin: 0 auto 57px
+			width: 240px
+			height: 96px
+			color: #A8A8A8
+			.footer__info-adress
+				color: #A8A8A8
+			.footer__info-phone
+				color: #A8A8A8
+				&:visited
+					color: #A8A8A8
+			.footer__info-email
+				color: #A8A8A8
+				&:visited
+					color: #A8A8A8
+		.footer__btn
+			display: block
+			background: none
+			border: none
+			margin: 0 auto
+			width: 40px
+			height: 40px
+	.footer__copy
+		position: absolute
+		bottom: 0
+		left: 0
+		width: 100%
+		padding: 42px 0
+		text-align: center
+		height: 100px
+		color: #CCCCCC
+		font-size: 12px
+		font-weight: 400
+		background: #2A2C2B
+
+@import media
