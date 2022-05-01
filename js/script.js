@@ -1,5 +1,4 @@
-/* document.addEventListener('DOMContentLoaded', () => {
-	// инициализация слайдера
+document.addEventListener('DOMContentLoaded', () => {
 	new ItcSimpleSlider('.itcss', {
 		loop: true,
 		autoplay: false,
@@ -7,4 +6,8 @@
 		swipe: true,
 	});
 });
- */
+
+window.addEventListener('resize', () => {
+	let vh = window.innerHeight * 0.01;
+	document.documentElement.style.setProperty('--vh', `${vh}px`);
+});

@@ -57,9 +57,6 @@ p
 	font-size: 14px
 	font-weight: lighter
 
-section
-	padding: 150px 0
-
 body
 	color: $color-text
 	min-height: 100vh
@@ -74,6 +71,8 @@ ol[class]
 
 a[class]
 	text-decoration: none
+	&:visited
+		color: $color-text
 
 img
 	max-width: 100%
@@ -115,22 +114,20 @@ select
 			padding: 26px 0
 
 	.header__content
-		width: 100%
 		font-family: Montserrat, Arial, Helvetica, sans-serif
 
 		.header__content-inner
 			display: flex
-			justify-content: center
 			flex-direction: column
 			align-items: center
+			padding: 225px 0 62px 0
 
 			.header__content-title
+				text-align: center
 				font-size: 100px
 				font-weight: bold
 				letter-spacing: 2px
 				color: #fff
-				margin-top: 223px
-				margin-bottom: 12px
 
 			.header__content-description
 				color: $color-orange
@@ -145,16 +142,52 @@ select
 				cursor: pointer
 
 .menu
+	display: flex
 	font-size: 12px
 	font-weight: bold
 	letter-spacing: 0.6px
+	.menu__toggle
+		position: fixed
+		top: 0
+		right: 0
+		visibility: hidden
+	.menu__btn
+		visibility: hidden
+		position: fixed
+		top: 35px
+		left: 90px
+		width: 26px
+		height: 26px
+		cursor: pointer
+		z-index: 1
+		span
+			display: block
+			position: absolute
+			width: 100%
+			height: 2px
+			background-color: #616161
+
+		&::before, &::after
+			display: block
+			position: absolute
+			width: 100%
+			height: 2px
+			background-color: #616161
+		&::before
+			content: ''
+			top: -8px
+		&::after
+			content: ''
+			top: 8px
 
 	.menu__list
 		display: flex
 		justify-content: space-between
-		width: 613px
+		flex-direction: row
+		flex-wrap: wrap
 
 	.menu__list-item
+		padding: 0 26px
 		.menu__link
 			text-transform: uppercase
 
@@ -175,6 +208,7 @@ select
 		display: flex
 		justify-content: space-between
 		flex-wrap: wrap
+		padding: 152px 0 159px
 		.about__title
 			font-size: 46px
 			height: fit-content
@@ -183,69 +217,92 @@ select
 
 .expertise
 	.expertise__title
+		margin-top: 143px
 	.expertise__content
 		display: flex
 		justify-content: space-between
-		padding: 110px 0
-		flex-wrap: wrap
+		height: 137px
+		margin: 90px 0
 		.expertise__content-items
 			display: flex
 			justify-content: space-between
 			flex-direction: column
-			.expertise__content-progressbar
+			.expertise__content-item
 				width: 350px
-				height: 2px
-				background: #F0F0F0
-				.expertise__content-progressbar--value
+				margin-right: 30px
+				.expertise__content-item_progress-bar
+					background: #F0F0F0
 					height: 2px
-					width: 270px
-					background: #1D1D1D
-					&:nth-child(2)
-						background: #e5e5e5
+					width: 350px
+					margin-bottom: 2px
+					.expertise__content-item_scale
+						display: block
+						height: 2px
+						background: #1D1D1D
+				.expertis__content-item__text
+					display: flex
+					justify-content: space-between
+					text-transform: uppercase
 
 		.expertise__content-text
-			max-width: 770px
-	.expertise__items
-		display: flex
-		justify-content: space-between
-		flex-wrap: wrap
-		.expertise__item
-			display: flex
-			align-items: flex-start
-			width: 350px
-			.expertise__item-img
-				margin-right: 35px
-			.expertise__item-box
-				.expertise__item-title
-					margin-bottom: 15px
-				.expertise__item-text
-
-.features
-	background: $color-bg url('/img/people.png') no-repeat left
-	.container
-		display: flex
-		justify-content: flex-end
-	.features__inner
-		display: flex
-		flex-direction: column
-		width: 470px
-		.features__title
-			margin-bottom: 67px
-			font-size: 60px
-			line-height: 75px
-			.features__text
+			p
+				font-family: Open Sans, Arial, sans-serif
 				font-size: 14px
 				font-weight: 300
 
+	.expertise__items
+		display: flex
+		justify-content: space-between
+		margin-bottom: 164px
+		.expertise__item
+			display: flex
+			margin-right: 27px
+			.expertise__item-img
+				width: 50px
+				height: 55px
+				margin-right: 35px
+			.expertise__item-box
+				.expertise__item-title
+					margin-bottom: 14px
+					font-size: 14px
+					font-weight: bold
+					font-family: Raleway
+				.expertise__item-text
+					color: #777777
+					font-size: 14px
+					font-weight: 300
+
+.features
+	background: $color-bg
+	padding: 0
+	display: flex
+	.features-left-side
+		width: 50%
+		background: #fff url('../img/people.png') no-repeat center / cover
+	.features-right-side
+		width: 50%
+		.features__inner
+			display: flex
+			flex-direction: column
+			margin: 0 auto
+			padding: 110px 0
+			max-width: 470px
+			.features__title
+				margin-bottom: 67px
+				font-size: 60px
+				line-height: 75px
+				.features__text
+					font-size: 14px
+					font-weight: 300
+
 .portfolio
-	padding-bottom: 0
 	.portfolio__head
 		display: flex
 		justify-content: space-between
 		align-items: center
 		flex-wrap: wrap
-		.portfolio__title
-
+		margin-top: 141px
+		.portfolio__head-title
 		.portfolio__buttons
 			.porfolio__btn
 				height: 30px
@@ -307,14 +364,13 @@ select
 		cursor: pointer
 
 .video
-	padding-bottom: 0
 	.video__quotes
 		display: flex
 		justify-content: center
 		flex-direction: column
 		max-width: 650px
 		text-align: center
-		margin: 0 auto 150px
+		margin: 130px auto 150px
 		p
 			margin-bottom: 40px
 			font-family: Merriweather
@@ -342,6 +398,7 @@ select
 	display: flex
 	justify-content: space-around
 	flex-wrap: wrap
+	margin: 164px 0 166px
 	.statistics__item
 		flex-direction: column
 		.statistics__item-num
@@ -352,6 +409,7 @@ select
 			color: $color-green
 
 .slider
+	position: relative
 	display: flex
 	justify-content: space-around
 	align-content: center
@@ -375,7 +433,6 @@ select
 				font-weight: 300
 				color: #777777
 				margin-bottom: 200px
-
 			.slider__pagination
 				display: flex
 				.slider__pagination-item
@@ -387,6 +444,7 @@ select
 
 .team
 	.team__title
+		margin-top: 120px
 		margin-bottom: 100px
 	.team__items
 		display: flex
@@ -394,7 +452,7 @@ select
 		flex-wrap: wrap
 		align-items: center
 		justify-content: space-between
-
+		margin-bottom: 164px
 		.team__item
 			display: flex
 			flex-direction: column
@@ -415,11 +473,13 @@ select
 .pricing
 	background: $color-bg
 	.pricing__title
+		padding-top: 144px
 		margin-bottom: 91px
 	.pricing__items
 		display: flex
 		justify-content: space-between
 		flex-wrap: wrap
+		padding-bottom: 162px
 		.pricing__item
 			width: 350px
 			height: 535px
@@ -453,12 +513,12 @@ select
 				cursor: pointer
 
 .partner
-	padding: 40px 0
 	.partner__list
 		display: flex
 		flex-wrap: wrap
 		justify-content: space-evenly
 		align-items: center
+		padding: 100px 0
 		.partner__list-item
 			width: 160px
 			height: 100%
@@ -466,15 +526,20 @@ select
 .contact
 	display: flex
 	.contact__title
-		margin-bottom: 94px
+		display: inline-block
+		margin-bottom: 60px
 	.contact__content
 		display: flex
 		justify-content: space-between
+		align-content: center
 		.contact__form
 			display: flex
 			flex-direction: column
 			justify-content: space-between
 			width: 570px
+			box-sizing: border-box
+			margin-right: 28px
+			padding: 145px 0 160px 0
 			.contact__form-input
 				border: none
 				border-bottom: 2px solid #373A39
@@ -507,9 +572,8 @@ select
 				cursor: pointer
 
 	.contact__map
-		height: 100%
-		width: 635px
-		background: url('/img/map1.jpg') no-repeat right / cover
+		width: 50%
+		background: url('../img/map.png') no-repeat center center / cover
 
 .footer
 	position: relative
@@ -555,6 +619,8 @@ select
 			margin: 0 auto
 			width: 40px
 			height: 40px
+			background: url('../img/arrow.svg') no-repeat center
+			cursor: pointer
 	.footer__copy
 		position: absolute
 		bottom: 0

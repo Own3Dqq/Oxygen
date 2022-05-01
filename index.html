@@ -14,14 +14,20 @@
 	<body>
 		<header class="header">
 			<div class="header__top">
-				<div class="container container-fluid">
+				<div class="container-fluid">
 					<div class="header__top-inner">
 						<div class="logo">
 							<a class="logo__link" href="">
 								<img src="img/Shape.svg" alt="" />
 							</a>
 						</div>
+
 						<nav class="menu">
+							<input class="menu__toggle" type="checkbox" />
+							<label class="menu__btn" for="menu__toggle">
+								<span></span>
+							</label>
+
 							<ul class="menu__list">
 								<li class="menu__list-item">
 									<a class="menu__link menu__link--active" href="">HOME</a>
@@ -51,7 +57,12 @@
 					<div class="header__content-inner">
 						<h1 class="header__content-title">OXYGEN</h1>
 						<p class="header__content-description">STARTED UI KIT</p>
-						<div class="header__content-decor">O</div>
+						<div class="header__content-decor">
+							<svg xmlns="http://www.w3.org/2000/svg" width="26" height="43" viewBox="0 0 26 43" fill="none">
+								<path fill-rule="evenodd" clip-rule="evenodd" d="M13 14C14.6569 14 16 12.6569 16 11C16 9.34315 14.6569 8 13 8C11.3431 8 10 9.34315 10 11C10 12.6569 11.3431 14 13 14Z" fill="white"/>
+								<rect x="1" y="1" width="24" height="41" rx="12" stroke="white" stroke-width="2"/>
+								</svg>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -83,45 +94,33 @@
 				<h2 class="expertise__title">Our Expertise</h2>
 				<div class="expertise__content">
 					<div class="expertise__content-items">
-						<div class="expertise__content-progressbar">
-							<div class="expertise__content-progressbar--value"></div>
-							<div class="expertis__content-text">
+						<div class="expertise__content-item">
+							<div class="expertise__content-item_progress-bar">
+								<span class="expertise__content-item_scale" style="width: 90%;"></span>
+							</div>
+							<div class="expertis__content-item__text">
 								<p>Branding</p>
 								<p>90%</p>
 							</div>
 						</div>
-						<div class="expertise__content-progressbar">
-							<div class="expertise__content-progressbar--value"></div>
-							<div class="expertis__content-text">
+						<div class="expertise__content-item">
+							<div class="expertise__content-item_progress-bar">
+								<span class="expertise__content-item_scale" style="width: 80%;"></span>
+							</div>
+							<div class="expertis__content-item__text">
+								<p>DESIGN</p>
+								<p>80%</p>
+							</div>
+						</div>
+						<div class="expertise__content-item">
+							<div class="expertise__content-item_progress-bar">
+								<span class="expertise__content-item_scale" style="width: 85%;"></span>
+							</div>
+							<div class="expertis__content-item__text">
 								<p>Branding</p>
-								<p>90%</p>
+								<p>85%</p>
 							</div>
 						</div>
-						<div class="expertise__content-progressbar">
-							<div class="expertise__content-progressbar--value"></div>
-							<div class="expertis__content-text">
-								<p>Branding</p>
-								<p>90%</p>
-							</div>
-						</div>
-						<!-- 						<div class="progress-element">
-							<div class="progress-container">
-								<progress max="100" value="90">90%</progress>
-							</div>
-							<p class="progress-label">Branding</p>
-						</div>
-						<div class="progress-element">
-							<div class="progress-container">
-								<progress max="100" value="90">90%</progress>
-							</div>
-							<p class="progress-label">Branding</p>
-						</div>
-						<div class="progress-element">
-							<div class="progress-container">
-								<progress max="100" value="90">90%</progress>
-							</div>
-							<p class="progress-label">Branding</p>
-						</div> -->
 					</div>
 					<div class="expertise__content-text">
 						<p>
@@ -171,7 +170,8 @@
 			</div>
 		</section>
 		<section class="features">
-			<div class="container">
+			<div class="features-left-side"></div>
+			<div class="features-right-side">
 				<div class="features__inner">
 					<h2 class="features__title">Let’s make magic.</h2>
 					<div class="features__text">
@@ -196,7 +196,7 @@
 		<section class="portfolio">
 			<div class="container">
 				<div class="portfolio__head">
-					<h2 class="portfolio__title">Portfolio</h2>
+					<h2 class="portfolio__head-title">Portfolio</h2>
 					<div class="portfolio__buttons">
 						<button class="porfolio__btn">All</button>
 						<button class="porfolio__btn">Branding</button>
@@ -205,8 +205,7 @@
 						<button class="porfolio__btn">Illustration</button>
 					</div>
 				</div>
-			</div>
-			<div class="container-fluid">
+
 				<div class="portfolio__images">
 					<div class="portfolio__item-img">
 						<div class="portfolio__item-overlay">
@@ -297,79 +296,99 @@
 			</div>
 		</section>
 		<section class="slider">
-			<!-- Разметка слайдера (html код) -->
-			<div class="itcss">
-				<div class="itcss__wrapper">
-					<div class="itcss__items">
-						<div class="itcss__item">
-							<!-- Контент 1 слайда -->
-							<h3 class="slider__item-title">Then they show that show to the people who make shows</h3>
-							<p class="slider__item-text">
-								The path of the righteous man is beset on all sides by the iniquities of the selfish and the tyranny of
-								evil men. Blessed is he who, in the name of charity and good will, shepherds the weak through the valley
-								of darkness, for he is truly his brother’s.
-							</p>
-						</div>
-						<div class="itcss__item">
-							<!-- Контент 2 слайда -->
-							<h3 class="slider__item-title">Then they show that show to the people who make shows</h3>
-							<p class="slider__item-text">
-								The path of the righteous man is beset on all sides by the iniquities of the selfish and the tyranny of
-								evil men. Blessed is he who, in the name of charity and good will, shepherds the weak through the valley
-								of darkness, for he is truly his brother’s.
-							</p>
-						</div>
-						<div class="itcss__item">
-							<!-- Контент 3 слайда -->
-							<h3 class="slider__item-title">Then they show that show to the people who make shows</h3>
-							<p class="slider__item-text">
-								The path of the righteous man is beset on all sides by the iniquities of the selfish and the tyranny of
-								evil men. Blessed is he who, in the name of charity and good will, shepherds the weak through the valley
-								of darkness, for he is truly his brother’s.
-							</p>
-						</div>
-						<div class="itcss__item">
-							<!-- Контент 4 слайда -->
-							<h3 class="slider__item-title">Then they show that show to the people who make shows</h3>
-							<p class="slider__item-text">
-								The path of the righteous man is beset on all sides by the iniquities of the selfish and the tyranny of
-								evil men. Blessed is he who, in the name of charity and good will, shepherds the weak through the valley
-								of darkness, for he is truly his brother’s.
-							</p>
+			<div class="container">
+				<div class="itcss">
+					<div class="itcss__wrapper">
+						<div class="itcss__items">
+							<div class="itcss__item">
+								<div class="itcss__item-text">
+									<h3 class="itcss__item-title">Then they show that show to the people who make shows</h3>
+									<p class="itcss__item-pharagraph">
+										The path of the righteous man is beset on all sides by the iniquities of the selfish and the tyranny
+										of evil men. Blessed is he who, in the name of charity and good will, shepherds the weak through the
+										valley of darkness, for he is truly his brother’s.
+								</div>
+								<div class="itcss__item-img">
+									<!-- <img src="img/woman-g9ba30e918_640.jpg" alt=""> -->
+								</div>
+								</p>
+							</div>
+							<div class="itcss__item">
+								<div class="itcss__item-text">
+									<h3 class="itcss__item-title">Then they show that show to the people who make shows</h3>
+									<p class="itcss__item-pharagraph">
+										The path of the righteous man is beset on all sides by the iniquities of the selfish and the tyranny
+										of evil men. Blessed is he who, in the name of charity and good will, shepherds the weak through the
+										valley of darkness, for he is truly his brother’s.
+								</div>
+								<div class="itcss__item-img">
+									<!-- <img src="img/woman-g9ba30e918_640.jpg" alt=""> -->
+								</div>
+								</p>
+							</div>
+							<div class="itcss__item">
+								<div class="itcss__item-text">
+									<h3 class="itcss__item-title">Then they show that show to the people who make shows</h3>
+									<p class="itcss__item-pharagraph">
+										The path of the righteous man is beset on all sides by the iniquities of the selfish and the tyranny
+										of evil men. Blessed is he who, in the name of charity and good will, shepherds the weak through the
+										valley of darkness, for he is truly his brother’s.
+								</div>
+								<div class="itcss__item-img">
+									<!-- <img src="img/woman-g9ba30e918_640.jpg" alt=""> -->
+								</div>
+								</p>
+							</div>
+							<div class="itcss__item">
+								<div class="itcss__item-text">
+									<h3 class="itcss__item-title">Then they show that show to the people who make shows</h3>
+									<p class="itcss__item-pharagraph">
+										The path of the righteous man is beset on all sides by the iniquities of the selfish and the tyranny
+										of evil men. Blessed is he who, in the name of charity and good will, shepherds the weak through the
+										valley of darkness, for he is truly his brother’s.
+								</div>
+								<div class="itcss__item-img">
+									<!-- <img src="img/woman-g9ba30e918_640.jpg" alt=""> -->
+								</div>
+								</p>
+							</div>
+							<div class="itcss__item">
+								<div class="itcss__item-text">
+									<h3 class="itcss__item-title">Then they show that show to the people who make shows</h3>
+									<p class="itcss__item-pharagraph">
+										The path of the righteous man is beset on all sides by the iniquities of the selfish and the tyranny
+										of evil men. Blessed is he who, in the name of charity and good will, shepherds the weak through the
+										valley of darkness, for he is truly his brother’s.
+								</div>
+								<div class="itcss__item-img">
+									<!-- <img src="img/woman-g9ba30e918_640.jpg" alt=""> -->
+								</div>
+								</p>
+							</div>
+							<div class="itcss__item">
+								<div class="itcss__item-text">
+									<h3 class="itcss__item-title">Then they show that show to the people who make shows</h3>
+									<p class="itcss__item-pharagraph">
+										The path of the righteous man is beset on all sides by the iniquities of the selfish and the tyranny
+										of evil men. Blessed is he who, in the name of charity and good will, shepherds the weak through the
+										valley of darkness, for he is truly his brother’s.
+								</div>
+								<div class="itcss__item-img">
+									<!-- <img src="img/woman-g9ba30e918_640.jpg" alt=""> -->
+								</div>
+								</p>
+							</div>
 						</div>
 					</div>
+					<!-- Стрелки для перехода к предыдущему и следующему слайду -->
+					<a class="itcss__control itcss__control_prev" href="#" role="button" data-slide="prev"></a>
+					<a class="itcss__control itcss__control_next" href="#" role="button" data-slide="next"></a>
 				</div>
-				<!-- Стрелки для перехода к предыдущему и следующему слайду -->
-				<a class="itcss__control itcss__control_prev" href="#" role="button" data-slide="prev"></a>
-				<a class="itcss__control itcss__control_next" href="#" role="button" data-slide="next"></a>
 			</div>
-			<!-- <div class="container">
-				<div class="slider__inner">
-					<div class="slider__item">
-						<h3 class="slider__item-title">Then they show that show to the people who make shows</h3>
-						<p class="slider__item-text">
-							The path of the righteous man is beset on all sides by the iniquities of the selfish and the tyranny of
-							evil men. Blessed is he who, in the name of charity and good will, shepherds the weak through the valley
-							of darkness, for he is truly his brother’s.
-						</p>
-						<div class="slider__pagination">
-							<div class="slider__pagination-item">&#8226;</div>
-							<div class="slider__pagination-item">&#8226;</div>
-							<div class="slider__pagination-item">&#8226;</div>
-							<div class="slider__pagination-item">&#8226;</div>
-							<div class="slider__pagination-item">&#8226;</div>
-						</div>
-					</div>
-					<div class="slider__item-img">
-						<img src="img/people.png" alt="" />
-					</div>
-				</div>
-			</div> -->
 		</section>
 		<section class="team">
 			<div class="container">
 				<h2 class="team__title">Our Team</h2>
-
 				<div class="team__items">
 					<div class="team__item">
 						<img class="team__item-img" src="img/photo 1.jpg" alt="" />
@@ -459,18 +478,24 @@
 			</div>
 		</section>
 		<section class="contact">
-			<div class="container container-fluid">
-				<h2 class="contact__title">Get in Touch</h2>
+			<div class="container">
+
 				<div class="contact__content">
 					<form class="contact__form" action="">
+						<h2 class="contact__title">Get in Touch</h2>
 						<input class="contact__form-input" type="text" placeholder="YOUR NAME" />
 						<input class="contact__form-input" type="text" placeholder="VALID EMAIL" />
 						<textarea class="contact__form-textarea" placeholder="YOUR MESSAGE"></textarea>
 						<button class="contact__form-btn">SEND MESSAGE</button>
 					</form>
+					<div class="contact__map">
+						<!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1354.5072425885387!2d31.299877637604435!3d51.491611215725456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46d548edc1ed7993%3A0xd7b26097ef68a55c!2sMOSHI!5e0!3m2!1sru!2sua!4v1651400305942!5m2!1sru!2sua" width="600" height="896" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> -->
+						<!-- <img src="img/map.png" alt=""> -->
+					</div>
 				</div>
+
 			</div>
-			<div class="contact__map"></div>
+
 		</section>
 		<footer class="footer">
 			<div class="footer__content">
@@ -494,7 +519,7 @@
 						<a class="footer__info-email" href="mailto:info@mail.com">info@mail.com</a>
 					</div>
 					<button class="footer__btn">
-						<img src="img/arrow.svg" alt="" />
+						<!-- <img src="img/arrow.svg" alt="" /> -->
 					</button>
 				</div>
 			</div>
