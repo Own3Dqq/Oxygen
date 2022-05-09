@@ -8,11 +8,10 @@
 		<title>Oxygen - Open a new life of nature</title>
 
 		<link rel="stylesheet" href="css/reset.css" />
-		<link rel="stylesheet" href="css/simple-adaptive-slider.css" />
 		<link rel="stylesheet" href="css/stylesheet.css" />
 	</head>
 	<body>
-		<header class="header">
+		<header class="header" id="header">
 			<div class="header__top">
 				<div class="container-fluid">
 					<div class="header__top-inner">
@@ -23,7 +22,7 @@
 						</div>
 
 						<nav class="menu">
-							<input class="menu__toggle" type="checkbox" />
+							<input id="menu__toggle" class="menu__toggle" type="checkbox" />
 							<label class="menu__btn" for="menu__toggle">
 								<span></span>
 							</label>
@@ -33,19 +32,19 @@
 									<a class="menu__link menu__link--active" href="">HOME</a>
 								</li>
 								<li class="menu__list-item">
-									<a class="menu__link" href="">ABOUT US</a>
+									<a class="menu__link" href="#about">ABOUT US</a>
 								</li>
 								<li class="menu__list-item">
-									<a class="menu__link" href="">PORTFOLIO</a>
+									<a class="menu__link" href="#portfolio">PORTFOLIO</a>
 								</li>
 								<li class="menu__list-item">
-									<a class="menu__link" href="">OUT TEAM</a>
+									<a class="menu__link" href="#team">OUT TEAM</a>
 								</li>
 								<li class="menu__list-item">
-									<a class="menu__link" href="">BLOG</a>
+									<a class="menu__link" href="#">BLOG</a>
 								</li>
 								<li class="menu__list-item">
-									<a class="menu__link" href="">CONTACT</a>
+									<a class="menu__link" href="#contact">CONTACT</a>
 								</li>
 							</ul>
 						</nav>
@@ -55,19 +54,29 @@
 			<div class="header__content">
 				<div class="container">
 					<div class="header__content-inner">
-						<h1 class="header__content-title">OXYGEN</h1>
-						<p class="header__content-description">STARTED UI KIT</p>
+						<div class="header__content-text">
+							<h1 class="header__content-title">OXYGEN</h1>
+							<p class="header__content-description">STARTED UI KIT</p>
+						</div>
+
 						<div class="header__content-decor">
-							<svg xmlns="http://www.w3.org/2000/svg" width="26" height="43" viewBox="0 0 26 43" fill="none">
-								<path fill-rule="evenodd" clip-rule="evenodd" d="M13 14C14.6569 14 16 12.6569 16 11C16 9.34315 14.6569 8 13 8C11.3431 8 10 9.34315 10 11C10 12.6569 11.3431 14 13 14Z" fill="white"/>
-								<rect x="1" y="1" width="24" height="41" rx="12" stroke="white" stroke-width="2"/>
+							<a href="#about">
+								<svg xmlns="http://www.w3.org/2000/svg" width="26" height="43" viewBox="0 0 26 43" fill="none">
+									<path
+										fill-rule="evenodd"
+										clip-rule="evenodd"
+										d="M13 14C14.6569 14 16 12.6569 16 11C16 9.34315 14.6569 8 13 8C11.3431 8 10 9.34315 10 11C10 12.6569 11.3431 14 13 14Z"
+										fill="white"
+									/>
+									<rect x="1" y="1" width="24" height="41" rx="12" stroke="white" stroke-width="2" />
 								</svg>
+							</a>
 						</div>
 					</div>
 				</div>
 			</div>
 		</header>
-		<section class="about">
+		<section class="about" id="about">
 			<div class="container">
 				<div class="about__inner">
 					<h2 class="about__title">ABOUT US</h2>
@@ -96,7 +105,7 @@
 					<div class="expertise__content-items">
 						<div class="expertise__content-item">
 							<div class="expertise__content-item_progress-bar">
-								<span class="expertise__content-item_scale" style="width: 90%;"></span>
+								<span class="expertise__content-item_scale" style="width: 90%"></span>
 							</div>
 							<div class="expertis__content-item__text">
 								<p>Branding</p>
@@ -105,7 +114,7 @@
 						</div>
 						<div class="expertise__content-item">
 							<div class="expertise__content-item_progress-bar">
-								<span class="expertise__content-item_scale" style="width: 80%;"></span>
+								<span class="expertise__content-item_scale" style="width: 80%"></span>
 							</div>
 							<div class="expertis__content-item__text">
 								<p>DESIGN</p>
@@ -114,7 +123,7 @@
 						</div>
 						<div class="expertise__content-item">
 							<div class="expertise__content-item_progress-bar">
-								<span class="expertise__content-item_scale" style="width: 85%;"></span>
+								<span class="expertise__content-item_scale" style="width: 85%"></span>
 							</div>
 							<div class="expertis__content-item__text">
 								<p>Branding</p>
@@ -193,7 +202,7 @@
 				</div>
 			</div>
 		</section>
-		<section class="portfolio">
+		<section class="portfolio" id="portfolio">
 			<div class="container">
 				<div class="portfolio__head">
 					<h2 class="portfolio__head-title">Portfolio</h2>
@@ -273,7 +282,7 @@
 			</div>
 			<video class="video__content" src=""></video>
 		</section>
-		<section class="statistics">
+		<section class="statistics" id="statistics">
 			<div class="container">
 				<div class="statistics__inner">
 					<div class="statistics__item">
@@ -307,11 +316,11 @@
 										The path of the righteous man is beset on all sides by the iniquities of the selfish and the tyranny
 										of evil men. Blessed is he who, in the name of charity and good will, shepherds the weak through the
 										valley of darkness, for he is truly his brother’s.
+									</p>
 								</div>
 								<div class="itcss__item-img">
 									<!-- <img src="img/woman-g9ba30e918_640.jpg" alt=""> -->
 								</div>
-								</p>
 							</div>
 							<div class="itcss__item">
 								<div class="itcss__item-text">
@@ -320,11 +329,11 @@
 										The path of the righteous man is beset on all sides by the iniquities of the selfish and the tyranny
 										of evil men. Blessed is he who, in the name of charity and good will, shepherds the weak through the
 										valley of darkness, for he is truly his brother’s.
+									</p>
 								</div>
 								<div class="itcss__item-img">
 									<!-- <img src="img/woman-g9ba30e918_640.jpg" alt=""> -->
 								</div>
-								</p>
 							</div>
 							<div class="itcss__item">
 								<div class="itcss__item-text">
@@ -333,11 +342,11 @@
 										The path of the righteous man is beset on all sides by the iniquities of the selfish and the tyranny
 										of evil men. Blessed is he who, in the name of charity and good will, shepherds the weak through the
 										valley of darkness, for he is truly his brother’s.
+									</p>
 								</div>
 								<div class="itcss__item-img">
 									<!-- <img src="img/woman-g9ba30e918_640.jpg" alt=""> -->
 								</div>
-								</p>
 							</div>
 							<div class="itcss__item">
 								<div class="itcss__item-text">
@@ -346,11 +355,11 @@
 										The path of the righteous man is beset on all sides by the iniquities of the selfish and the tyranny
 										of evil men. Blessed is he who, in the name of charity and good will, shepherds the weak through the
 										valley of darkness, for he is truly his brother’s.
+									</p>
 								</div>
 								<div class="itcss__item-img">
 									<!-- <img src="img/woman-g9ba30e918_640.jpg" alt=""> -->
 								</div>
-								</p>
 							</div>
 							<div class="itcss__item">
 								<div class="itcss__item-text">
@@ -359,11 +368,11 @@
 										The path of the righteous man is beset on all sides by the iniquities of the selfish and the tyranny
 										of evil men. Blessed is he who, in the name of charity and good will, shepherds the weak through the
 										valley of darkness, for he is truly his brother’s.
+									</p>
 								</div>
 								<div class="itcss__item-img">
 									<!-- <img src="img/woman-g9ba30e918_640.jpg" alt=""> -->
 								</div>
-								</p>
 							</div>
 							<div class="itcss__item">
 								<div class="itcss__item-text">
@@ -372,11 +381,11 @@
 										The path of the righteous man is beset on all sides by the iniquities of the selfish and the tyranny
 										of evil men. Blessed is he who, in the name of charity and good will, shepherds the weak through the
 										valley of darkness, for he is truly his brother’s.
+									</p>
 								</div>
 								<div class="itcss__item-img">
 									<!-- <img src="img/woman-g9ba30e918_640.jpg" alt=""> -->
 								</div>
-								</p>
 							</div>
 						</div>
 					</div>
@@ -386,7 +395,7 @@
 				</div>
 			</div>
 		</section>
-		<section class="team">
+		<section class="team" id="team">
 			<div class="container">
 				<h2 class="team__title">Our Team</h2>
 				<div class="team__items">
@@ -408,7 +417,7 @@
 				</div>
 			</div>
 		</section>
-		<section class="pricing">
+		<section class="pricing" id="pricing">
 			<div class="container">
 				<h2 class="pricing__title">Pricing Plans</h2>
 				<div class="pricing__items">
@@ -451,7 +460,7 @@
 				</div>
 			</div>
 		</section>
-		<section class="partner">
+		<section class="partner" id="partner">
 			<div class="container">
 				<ul class="partner__list">
 					<li class="partner__list-item">
@@ -477,9 +486,8 @@
 				</ul>
 			</div>
 		</section>
-		<section class="contact">
+		<section class="contact" id="contact">
 			<div class="container">
-
 				<div class="contact__content">
 					<form class="contact__form" action="">
 						<h2 class="contact__title">Get in Touch</h2>
@@ -488,16 +496,11 @@
 						<textarea class="contact__form-textarea" placeholder="YOUR MESSAGE"></textarea>
 						<button class="contact__form-btn">SEND MESSAGE</button>
 					</form>
-					<div class="contact__map">
-						<!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1354.5072425885387!2d31.299877637604435!3d51.491611215725456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46d548edc1ed7993%3A0xd7b26097ef68a55c!2sMOSHI!5e0!3m2!1sru!2sua!4v1651400305942!5m2!1sru!2sua" width="600" height="896" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> -->
-						<!-- <img src="img/map.png" alt=""> -->
-					</div>
 				</div>
-
 			</div>
-
+			<div class="contact__map"></div>
 		</section>
-		<footer class="footer">
+		<footer class="footer" id="footer">
 			<div class="footer__content">
 				<div class="container">
 					<div class="logo logo--line">
@@ -518,9 +521,16 @@
 						<a class="footer__info-phone" href="tel:0038765252222">(00387) 65 252 222</a>
 						<a class="footer__info-email" href="mailto:info@mail.com">info@mail.com</a>
 					</div>
-					<button class="footer__btn">
-						<!-- <img src="img/arrow.svg" alt="" /> -->
-					</button>
+					<a class="footer__btn" href="#header">
+						<svg width="17" height="9" viewBox="0 0 17 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path
+								fill-rule="evenodd"
+								clip-rule="evenodd"
+								d="M16.354 7.89597L15.647 8.60297L8.5 1.45697L1.354 8.60297L0.647003 7.89597L8.5 0.0429688L16.354 7.89597Z"
+								fill="white"
+							/>
+						</svg>
+					</a>
 				</div>
 			</div>
 			<div class="footer__copy">@2015 Oxygen Theme</div>
