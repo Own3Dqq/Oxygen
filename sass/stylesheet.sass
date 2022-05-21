@@ -439,40 +439,71 @@ select
 				font-size: 14px
 				color: $color-green
 
+//SLider
 .slider
-	height: 840px
 	position: relative
-	display: flex
-	justify-content: space-around
-	align-items: center
-	background: $color-bg
-	.slider__inner
+	padding: 120px 0
+	.slider__items
 		display: flex
-		justify-content: space-around
 		.slider__item
 			display: flex
-			justify-content: center
-			flex-direction: column
-			max-width: 670px
-			.slider__item-title
-				max-width: 705px
-				font-size: 40px
-				font-weight: bold
-				line-height: 52px
-				margin-bottom: 30px
-			.slider__item-text
-				font-size: 14px
-				font-weight: 300
-				color: #777777
-				margin-bottom: 200px
-			.slider__pagination
+			justify-content: space-between
+			.slider__item-left
+				width: 660px
 				display: flex
-				.slider__pagination-item
+				flex-direction: column
+				justify-content: center
+				.slider__item-title
 					font-size: 40px
-		.slider__item-img
-			width: 424px
-			height: 430px
-			background: #d7d7d7
+					font-weight: bold
+					margin-bottom: 30px
+				.slider__item-text
+					width: 90%
+			.slider__item-right
+				.slider__item-img
+					width: 425px
+					height: 430px
+
+.slick-prev
+	position: absolute
+	top: 50%
+	left: -85px
+	width: 35px
+	height: 35px
+	border: none
+	background: url('../img/arrow-left.svg')
+.slick-next
+	position: absolute
+	top: 50%
+	right: -85px
+	width: 35px
+	height: 35px
+	border: none
+	background: url('../img/arrow-right.svg')
+
+.slick-dots
+	position: absolute
+	bottom: -20%
+	left: 0
+	display: flex
+	justify-content: space-between
+	width: 250px
+	li
+		display: flex
+		align-items: center
+		button
+			margin: 0 auto
+			line-height: 0
+			display: block
+			width: 6px
+			height: 6px
+			border-radius: 50%
+			padding: 5px
+			cursor: pointer
+			color: #000
+			border: 0
+			outline: none
+			background: #a2a2a3
 
 .team
 	// max-height: 830px

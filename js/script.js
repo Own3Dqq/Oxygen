@@ -1,13 +1,15 @@
-document.addEventListener('DOMContentLoaded', () => {
-	new ItcSimpleSlider('.itcss', {
-		loop: true,
-		autoplay: false,
-		interval: 5000,
-		swipe: true,
+$(document).ready(function () {
+	$('.slider__items').slick({
+		autoplay: 10000,
+		prevArrow: '<button class="slick-prev" type="button" ></button>',
+		nextArrow: '<button class="slick-next" type="button" ></button>',
+		dots: true,
+		infinite: true,
+		speed: 500,
+		customPaging: function (slider, i) {
+			return $('<button type="button" />');
+		},
+		fade: true,
+		cssEase: 'linear',
 	});
-});
-
-window.addEventListener('resize', () => {
-	let vh = window.innerHeight * 0.01;
-	document.documentElement.style.setProperty('--vh', `${vh}px`);
 });
